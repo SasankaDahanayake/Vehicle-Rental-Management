@@ -1,0 +1,1 @@
+{ "_id" : { "$oid" : "5de9e37ad47c076c143ac999"} , "plateNo" : "456" , "make" : "456" , "isAvailable" : true , "rentalPrice" : 147 , "carType" : "897" , "numberOfSeats" : 369 , "carTransmission" : "y" , "driverIncluded" : true}

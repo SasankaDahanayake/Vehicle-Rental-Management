@@ -1,0 +1,1 @@
+{ "_id" : { "$oid" : "5de9179ad47c07700c871e2d"} , "plateNo" : "qwert" , "make" : "treq" , "isAvailable" : true , "rentalPrice" : 500 , "motorbikeType" : "TW" , "transmission" : "manual" , "cylinderCapacity" : "500"}

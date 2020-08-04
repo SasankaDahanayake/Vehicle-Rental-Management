@@ -1,0 +1,35 @@
+<div class="container">
+
+  <h1 class="d-flex justify-content-center">Westminster Vehicle Rental</h1>
+
+  <nav class="navbar navbar-expand-sm bg-light navbark-dark">
+    <ul class="navbar-nav">
+
+      <div class = "button1">
+      <li class="nav-item">
+        <button class ="m-3 btn btn-light btn-outline-primary" Button 
+        label = "CarScreen"
+        (click)="CarScreen=true; BikeScreen=false;">
+      Cars
+      </button>
+      </li>
+      <li class="nav-item">
+        <button class ="m-3 btn btn-light btn-outline-primary" Button 
+          label = "BikeScreen"
+          (click)="CarScreen=false; BikeScreen=true;">
+        Bikes
+      </button>
+      </li> 
+    </div>
+
+      </ul>
+    </nav>
+  <app-car *ngIf="CarScreen"></app-car>
+  <app-bike *ngIf="BikeScreen"></app-bike>
+  
+</div>
+
+<router-outlet></router-outlet>
+
+
+  

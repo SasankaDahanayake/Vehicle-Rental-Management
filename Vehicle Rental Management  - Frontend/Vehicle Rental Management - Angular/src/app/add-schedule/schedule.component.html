@@ -1,0 +1,103 @@
+<!-- <d<iv class="schedule-container">
+    <mat-form-field floatLabel="never" hideRequiredMarker appearance = "fill" color = "accent">
+        <mat-label>Customer Name</mat-label>
+        <input matInput placeholder="Input">
+        
+    </mat-form-field>
+    
+    <mat-form-field>
+        <textarea matInput placeholder="Textarea"></textarea>
+    </mat-form-field>
+    
+    <mat-form-field>
+        <mat-select placeholder="Select">
+        <mat-option value="option">Option</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+>
+<router-outlet></router-outlet> -->
+<!-- <div class="container">
+<form #form="ngForm" (submit)="onSubmit(form)" autocomplete="off">
+    <form [formGroup] = "service.form" class="normal-form">
+        <mat-grid-list cols="2" rowHeight="300px">
+            <mat-grid-tile>
+                <div class="controles-container">
+                    <mat-form-field>
+                        <input matInput = "customerName" matInput placeholder="Customer Name" #customerName="ngModel" [(ngModel)]="service.formData.customerName">
+                    </mat-form-field> 
+                    <mat-form-field>
+                        <input matInput = "customerNIC" matInput placeholder="Customer NIC" #customerNIC="ngModel" [(ngModel)]="service.formData.customerNIC">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput = "pickupDate" matInput placeholder="Pick-Up Date" #customerName="ngModel" [(ngModel)]="service.formData.pickupDate">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput = "dropoffDate" matInput placeholder="Drop-Off Date" #customerName="ngModel" [(ngModel)]="service.formData.dropoffDate">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput = "vehiclePlateNo" matInput placeholder="Vehicle Plate Number" #customerName="ngModel" [(ngModel)]="service.formData.vehiclePlateNo">
+                    </mat-form-field>    
+                </div>
+            </mat-grid-tile>    
+        </mat-grid-list>
+    
+    </form>
+</form>
+</div> -->
+<div class="d-flex justify-content-between">
+    <h4>Create new Schedule</h4>
+
+    <button mat-button (click)="onClose()">
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div style="overflow: auto; height:450px;">
+    <form #form=ngForm (submit)="onSubmit(form)"autocomplete="off">
+
+        <div class="mt-4 input group">
+
+            <div class="input-group-prepend">
+                <span class = "input-group-text">Customer Name</span>
+            </div>
+            <input required minlength="2" type="text" class="form-control" name="customerName" #customerName="ngModel" [(ngModel)]=service.formData.customerName>
+
+        </div>
+        
+        <div class="mt-4 input group">
+        <div class="input-group-prepend">
+                <span class = "input-group-text">Customer NIC</span>
+        </div>
+        <input required minlength="2" type="text" class="form-control" name="customerNIC" #customerName="ngModel" [(ngModel)]=service.formData.customerNIC>
+
+        </div>
+
+        <div class="mt-4 input group">
+            <div class="input-group-prepend">
+                    <span class = "input-group-text">Pick-Up Date</span>
+            </div>
+            <input required minlength="2" type="text" class="form-control" name="pickupDate" #customerName="ngModel" [(ngModel)]=service.formData.pickupDate>
+        
+        </div>
+
+        <div class="mt-4 input group">
+            <div class="input-group-prepend">
+                    <span class = "input-group-text">Drop-Off Date</span>
+            </div>
+            <input required minlength="2" type="text" class="form-control" name="dropoffDate" #customerName="ngModel" [(ngModel)]=service.formData.dropoffDate>
+        
+        </div>
+
+        <div class="mt-4 input group">
+            <div class="input-group-prepend">
+                    <span class = "input-group-text">Vehicle Plate Number</span>
+            </div>
+            <input required minlength="2" type="text" class="form-control" name="vehiclePlateNo" #customerName="ngModel" [(ngModel)]=service.formData.vehiclePlateNo>
+        
+            </div>
+        
+        <button class="mt-4" mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Create Schedule</button>
+
+    </form>
+</div>
